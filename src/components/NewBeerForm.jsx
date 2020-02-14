@@ -1,13 +1,33 @@
 import React from 'react';
 
+const beerform = {
+    textAlign: "center",
+    paddingTop: "40px",
+    paddingBottom: "400px"
+}
+
 function NewBeerForm() {
     return (
-        <div>
+        <div style={beerform}>
             <form>
-                <input type='text' id='name' placeholder='Beer Name' />
-                <input type='text' id='brand' placeholder='Brand' />
-                <input type='text' id='price' placeholder='Price' />
-                <input type='text' id='abv' placeholder='ABV' />
+                <div className="row">
+                    <div className="col">
+                        <input className="form-control" type='text' id='name' placeholder='Beer Name' />
+                    </div>
+                    <div className="col">
+                        <input className="form-control" type='text' id='brand' placeholder='Brand' />
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col">
+                        <input className="form-control" type='text' id='price' placeholder='Price' />
+                    </div>
+                    <div className="col">
+                        <input className="form-control" type='text' id='abv' placeholder='ABV' />
+                    </div>
+                </div>
+                <br />
                 <button type='submit'>Submit</button>
             </form>
         </div>

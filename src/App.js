@@ -29,16 +29,7 @@ function App() {
       <Route path='/newbeerform' component={NewBeerForm} />
     </Switch>
       </div>
-        <hr/>
-                <div className="row">
-                    <div className="col-md-6">
-                        <BeerList />
-                    </div>
-                    <div className="col-md-6">
-                        <BeerImage />
-                    </div>
-                </div>
-            </div>
+        </div>
     </div>
   );
 }
