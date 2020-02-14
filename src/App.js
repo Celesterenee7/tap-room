@@ -2,9 +2,9 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Header from "./components/Header";
-import Beer from "./components/BeerList";
-import { Switch, Route } from 'react-router-dom';
 import NewBeerForm from './components/NewBeerForm';
+import { Switch, Route } from 'react-router-dom';
+import Error404 from './components/Error404';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
