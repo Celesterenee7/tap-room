@@ -7,10 +7,9 @@ const beerinfo = {
 }
 
 const beerGroup = {
-    paddingLeft: "150px"
+    paddingLeft: "150px",
+    fontSize: "20px"
 }
-
-
 
 
 function Beer(props) {

@@ -1,3 +1,23 @@
 h1 {
   padding-bottom: 10px;
 }
+
+.beerimage {
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.beerimage:hover {
+  -webkit-filter: grayscale(50%);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+}
+
+.row {
+  padding-top: 50px;
+}

@@ -2,10 +2,13 @@ import React from 'react';
 import Beer from './Beer';
 import Vicious from './images/vicious.png';
 import Cocoa from './images/cocoa.jpg';
+import Fuzztail from './images/fuzztail.jpg';
+import Shredhead from './images/shredhead.jpg';
 
-const image = {
+
+const beerimage = {
     width: '25%',
-    paddingBottom: "50px",
+    paddingBottom: "80px",
     marginLeft: "100px"
 
 }
@@ -13,10 +16,20 @@ const image = {
 function BeerImage() {
     return (
         <div>
-            <img src={Vicious} alt="vicious" style={image} />
-            <div>
-                <img src={Cocoa} alt="vicious" style={image} />
+            <div className="beerimage">
+                <img src={Vicious} alt="vicious" style={beerimage} />
             </div>
+            <div className="beerimage">
+                <img src={Cocoa} alt="vicious" style={beerimage} />
+            </div>
+            <div className="beerimage">
+                <img src={Fuzztail} alt="fuzztail" style={beerimage} />
+            </div>
+            <div className="beerimage">
+                <img src={Shredhead} alt="shredhead" style={beerimage} />
+            </div>
+
+
         </div>
     );
 }
