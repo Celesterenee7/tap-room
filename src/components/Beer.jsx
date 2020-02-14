@@ -1,15 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const beerinfo = {
+    paddingBottom: "80px"
+}
+
+const beerGroup = {
+    paddingLeft: "150px"
+}
+
+
 
 
 function Beer(props) {
     return (
         <div>
-            <p>Name: {props.name} </p>
-            <p>Brand: {props.brand}</p>
-            <p>Price: {props.price}</p>
-            <p>ABV: {props.alcoholByVolume}</p>
-            <br />
+            <div style={beerGroup}>
+                <p>Name: {props.name} </p>
+                <p>Brand: {props.brand}</p>
+                <p>Price: {props.price}</p>
+                <p style={beerinfo}>ABV: {props.alcoholByVolume}</p>
+                <br />
+            </div>
         </div>
     );
 }

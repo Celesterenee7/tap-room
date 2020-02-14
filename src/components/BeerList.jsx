@@ -29,16 +29,10 @@ const beers = [
     },
 ];
 
-const title = {
-    color: "orange",
-    textAlign: "center"
-}
-
 function BeerList(props) {
     return (
         <div>
-            <h1 style={title}>Beer is good</h1>
-            <div className="beerList">
+            <div>
                 {beers.map((beer, index) =>
                     <Beer name={beer.name}
                         brand={beer.brand}

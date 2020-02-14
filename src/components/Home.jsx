@@ -6,6 +6,7 @@ import BeerImage from './BeerImage';
 function Home() {
     return (
         <div>
+            <h1>Beer is good</h1>
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
