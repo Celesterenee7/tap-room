@@ -12,7 +12,8 @@ function NavBar() {
     }
 
     const logo = {
-        width: "3%"
+        width: "4%",
+        paddingLeft: "25px"
     }
 
     const menu = {
@@ -20,7 +21,7 @@ function NavBar() {
         height: "80px",
         textAlign: "center",
         paddingTop: '20px',
-        wordSpacing: '20px'
+        wordSpacing: '30px'
     }
 
     const navigation = {
@@ -36,8 +37,8 @@ function NavBar() {
         <div>
 
             <div style={menu}>
-                <a className="menuLine" href="#" style={navigation} > Home </a>
-                <a href="#" style={navigation} > Work </a>
+                <a className="menuLine" href="#" style={navigation} > Beers </a>
+                <a href="#" style={navigation} > Locations</a>
                 <img className="beerimage" src={Logo} alt="logo" style={logo} />
                 <a href="#" style={navigation} > About </a>
                 <a href="#" style={navigation} > Contact </a>

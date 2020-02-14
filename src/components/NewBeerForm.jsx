@@ -2,7 +2,7 @@ import React from 'react';
 
 const beerform = {
     textAlign: "center",
-    paddingTop: "40px",
+    paddingTop: "30px",
     paddingBottom: "400px"
 }
 
