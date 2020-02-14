@@ -5,7 +5,7 @@
 The concept for this project is to build a website using React that displays a tap room where a bar or kombucha store can track their kegs.
 
 ## Component Structure
-
+![alt text](https://raw.githubusercontent.com/Celesterenee7/tap-room/master/public/structure.png)
 
 ## User Stories:
 * As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
