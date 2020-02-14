@@ -19,15 +19,16 @@ function App() {
   return (
     <div>
       <NavBar />
+      <br/>
+      <h1 style={title}>Sunriver Brewery</h1>
+      <div className="container">
       <div>
       <Header/>
     <Switch>
-      <Route exact path='/' component={BeerList} />
-      <Route path='/newbeer' component={NewBeerForm} />
+      <Route exact path='/' component={Home} />
+      <Route path='/newbeerform' component={NewBeerForm} />
     </Switch>
       </div>
-      <h1 style={title}>Sunriver Brewery</h1>
-      <div className="container">
         <hr/>
                 <div className="row">
                     <div className="col-md-6">
