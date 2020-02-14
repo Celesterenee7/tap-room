@@ -30,7 +30,8 @@ const beers = [
 ];
 
 const title = {
-    color: "orange"
+    color: "orange",
+    textAlign: "center"
 }
 
 function BeerList(props) {
