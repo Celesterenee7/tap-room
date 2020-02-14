@@ -1,20 +1,20 @@
 import React from 'react';
-import Header from './components/Header';
+import NavBar from './components/NavBar';
 import Home from './components/Home';
+import BeerList from "./components/BeerList";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 
 function App() {
   return (
     <div>
-      <Header />
-      <div className="container">
-
-      </div>
+      <NavBar />
+    <div className='container'>
+      <h1>Beer List</h1>
+    </div>
     </div>
   );
 }
-
-
 
 export default App;

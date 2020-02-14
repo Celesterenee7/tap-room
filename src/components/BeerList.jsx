@@ -1,9 +1,8 @@
 import React from 'react';
-import Header from './Header';
 import Beer from './Beer';
 import PropTypes from 'prop-types';
 
-const sunriverBeers = [
+const beers = [
     {
         name: "Vicious Mosquito IPA",
         brand: "Sunriver Brewery",
@@ -28,28 +27,24 @@ const sunriverBeers = [
         price: "$6",
         alcoholByVolume: "8%"
     },
-
 ];
 
 function BeerList(props) {
     return (
         <div>
-            <p>Name: {props.name} </p>
-            <p>Brand: {props.brand}</p>
-            <p>Price: {props.price}</p>
-            <p>ABV: {props.alcoholByVolume}</p>
-            <ul>
-                {props.selection.map((crop) =>
-                    <li>{crop}</li>
+            <h3>Beer is good</h3>
+            <div className="beerList">
+                {beers.map((beer, index) =>
+                    <Beer name={beer.name}
+                        brand={beer.brand}
+                        price={beer.price}
+                        alcoholByVolume={beer.alcoholByVolume} />
                 )}
-            </ul>
-            <br />
+            </div>
         </div>
-    )
+    );
 }
 
-Beer.propTypes = {
 
-};
-export default Beer;
+export default BeerList;
 

@@ -2,7 +2,7 @@ import React from "react";
 import Banner from './images/banner.jpg';
 import Logo from './images/logo.png';
 
-function Header() {
+function NavBar() {
 
     const image = {
         backgroundPosition: "center",
@@ -46,4 +46,4 @@ function Header() {
         </div>
     );
 }
-export default Header;
+export default NavBar;

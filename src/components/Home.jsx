@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react';
+import BeerList from './BeerList';
+import Beer from './Beer';
+
 
 function Home() {
-
     return (
-        <div>
+        <div className="Home">
             <div className="row">
-                <div className="col-md-12">
-
+                <div className="col-md-6">
+                    <BeerList />
                 </div>
             </div>
         </div>
