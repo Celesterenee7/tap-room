@@ -11,7 +11,7 @@ function App() {
     <div>
       <NavBar />
     <div className='container'>
-      <h1>Beer List</h1>
+      <BeerList />
     </div>
     </div>
   );
