@@ -34,16 +34,15 @@ function Header() {
 
     return (
         <div>
-            <img src={Banner} alt="banner" style={image} />
+
             <div style={menu}>
                 <a href="#" style={navigation} > Home </a>
                 <a href="#" style={navigation} > Work </a>
-                <div>
-                    <img src={Logo} alt="logo" style={logo} />
-                </div>
+                <img src={Logo} alt="logo" style={logo} />
                 <a href="#" style={navigation} > About </a>
                 <a href="#" style={navigation} > Contact </a>
             </div>
+            <img src={Banner} alt="banner" style={image} />
         </div>
     );
 }
