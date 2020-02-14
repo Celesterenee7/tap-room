@@ -8,7 +8,7 @@ import Shredhead from './images/shredhead.jpg';
 
 const beerimage = {
     width: '25%',
-    paddingBottom: "80px",
+    paddingBottom: "90px",
     marginLeft: "100px"
 
 }

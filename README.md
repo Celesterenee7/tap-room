@@ -2,7 +2,10 @@
 #### React Fundamentals for Epicodus, 2/14/20
 #### By Celeste Renee Morton
 ## Description:
-The concept for this project is to build a website using React that displays a tap room where a bar or kombucha store can track their kegs. 
+The concept for this project is to build a website using React that displays a tap room where a bar or kombucha store can track their kegs.
+
+## Component Structure
+
 
 ## User Stories:
 * As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).

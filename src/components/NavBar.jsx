@@ -36,7 +36,7 @@ function NavBar() {
         <div>
 
             <div style={menu}>
-                <a href="#" style={navigation} > Home </a>
+                <a className="menuLine" href="#" style={navigation} > Home </a>
                 <a href="#" style={navigation} > Work </a>
                 <img className="beerimage" src={Logo} alt="logo" style={logo} />
                 <a href="#" style={navigation} > About </a>

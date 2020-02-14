@@ -16,10 +16,10 @@ function Beer(props) {
     return (
         <div>
             <div style={beerGroup}>
-                <p>Name: {props.name} </p>
+                <p>Name: <em>{props.name}</em> </p>
                 <p>Brand: {props.brand}</p>
                 <p>Price: {props.price}</p>
-                <p style={beerinfo}>ABV: {props.alcoholByVolume}</p>
+                <p style={beerinfo}>ABV: <strong>{props.alcoholByVolume}</strong></p>
                 <br />
             </div>
         </div>
