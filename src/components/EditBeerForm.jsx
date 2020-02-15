@@ -1,21 +1,22 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-const addBeer = {
+const editBeer = {
     paddingTop: "15px",
     color: "#4D1A18"
 }
 
-const beerform = {
+const editform = {
     textAlign: "center",
     paddingTop: "10px",
     paddingBottom: "400px"
 }
 
-function NewBeerForm() {
+function EditBeerForm(props) {
     return (
-        <div style={beerform}>
+        <div style={editform}>
             <hr />
-            <h3 style={addBeer}>Add a new beer below!</h3>
+            <h3 style={editBeer}>Update an existing beer below!</h3>
             <form>
                 <div className="row">
                     <div className="col">
@@ -35,10 +36,14 @@ function NewBeerForm() {
                     </div>
                 </div>
                 <br />
-                <button type='submit'>Submit</button>
+                <button type='submit'>Update</button>
             </form>
         </div>
     );
 }
 
-export default NewBeerForm;
+EditBeerForm.propTypes = {
+    beer: PropTypes.object.isRequired,
+};
+
+export default EditBeerForm;
