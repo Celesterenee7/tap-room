@@ -10,7 +10,7 @@ const beers = [
         alcoholByVolume: "7%"
     },
     {
-        name: "Cocoa Cow - Chocolate Milk Stout",
+        name: "Cocoa Cow - Chocolate Stout",
         brand: "Sunriver Brewery",
         price: "$5.50",
         alcoholByVolume: "7%"

@@ -57,6 +57,12 @@ h1 {
   transition: all 0.3s ease-in-out 0s;
 }
 
+.title {
+  color: rgb(234, 152, 3);
+  text-align: center;
+  padding-top: 40px;
+}
+
 .row {
   padding-top: 50px;
 }

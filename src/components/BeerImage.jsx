@@ -1,5 +1,4 @@
 import React from 'react';
-import Beer from './Beer';
 import Vicious from './images/vicious.png';
 import Cocoa from './images/cocoa.jpg';
 import Fuzztail from './images/fuzztail.jpg';
@@ -8,9 +7,8 @@ import Shredhead from './images/shredhead.jpg';
 
 const beerimage = {
     width: '25%',
-    paddingBottom: "90px",
-    marginLeft: "100px"
-
+    paddingBottom: "100px",
+    marginLeft: "150px",
 }
 
 function BeerImage() {
@@ -28,8 +26,6 @@ function BeerImage() {
             <div className="beerimage">
                 <img src={Shredhead} alt="shredhead" style={beerimage} />
             </div>
-
-
         </div>
     );
 }

@@ -11,12 +11,17 @@ const beerGroup = {
     fontSize: "20px"
 }
 
+const beerName = {
+    color: "rgb(234, 152, 3)",
+    fontWeight: "700"
+}
+
 
 function Beer(props) {
     return (
         <div>
             <div style={beerGroup}>
-                <p>Name: <em>{props.name}</em> </p>
+                <p>Name: <em style={beerName}>{props.name}</em> </p>
                 <p>Brand: {props.brand}</p>
                 <p>Price: {props.price}</p>
                 <p style={beerinfo}>ABV: <strong>{props.alcoholByVolume}</strong></p>
