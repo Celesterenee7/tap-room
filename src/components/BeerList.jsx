@@ -1,6 +1,5 @@
 import React from 'react';
 import Beer from './Beer';
-import PropTypes from 'prop-types';
 
 const beers = [
     {
@@ -29,7 +28,7 @@ const beers = [
     },
 ];
 
-function BeerList(props) {
+function BeerList() {
     return (
         <div>
             <div>
@@ -37,7 +36,8 @@ function BeerList(props) {
                     <Beer name={beer.name}
                         brand={beer.brand}
                         price={beer.price}
-                        alcoholByVolume={beer.alcoholByVolume} />
+                        alcoholByVolume={beer.alcoholByVolume}
+                        key={index} />
                 )}
             </div>
         </div>

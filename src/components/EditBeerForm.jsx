@@ -12,7 +12,7 @@ const editform = {
     paddingBottom: "400px"
 }
 
-function EditBeerForm(props) {
+function EditBeerForm() {
     return (
         <div style={editform}>
             <hr />
