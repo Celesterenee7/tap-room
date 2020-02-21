@@ -8,7 +8,7 @@ const links = {
 function Header() {
     return (
         <div style={links}>
-            <Link to="/newbeerform">Add New Beer</Link> | <Link to="/editbeerform">Edit Existing Beer</Link>
+            <Link to="/newbeer">Add New Beer</Link> | <Link to="/editbeerform">Edit Existing Beer</Link>
         </div>
     );
 }
