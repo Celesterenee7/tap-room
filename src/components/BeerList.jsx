@@ -9,7 +9,7 @@ function BeerList(props) {
                 <Beer name={beer.name}
                     brand={beer.brand}
                     price={beer.price}
-                    alcoholByVolume={beer.alcoholByVolume}
+                    abv={beer.abv}
                     key={index} />
             )}
         </div>

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Heart from './images/heart.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const beerinfo = {
-    paddingBottom: "80px"
+
 }
 
 const beerGroup = {
@@ -16,19 +17,40 @@ const beerName = {
     fontWeight: "700"
 }
 
+const heartImage = {
+    width: "3%"
+}
 
-function Beer(props) {
-    return (
-        <div>
-            <div style={beerGroup}>
-                <p>Name: <em style={beerName}>{props.name}</em> </p>
-                <p>Brand: {props.brand}</p>
-                <p>Price: {props.price}</p>
-                <p style={beerinfo}>ABV: <strong>{props.alcoholByVolume}</strong></p>
-                <br />
+
+class Beer extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            heartCount: 0
+        };
+        this.increaseHeartCount = this.increaseHeartCount.bind(this);
+    }
+
+    increaseHeartCount(event) {
+        let newHeartCount = this.state.heartCount + 1
+        this.setState({ heartCount: newHeartCount });
+    }
+
+    render() {
+        return (
+            <div>
+                <div style={beerGroup}>
+                    <p>Name: <em style={beerName}>{this.props.name}</em> </p>
+                    <p>Brand: {this.props.brand}</p>
+                    <p>Price: {this.props.price}</p>
+                    <p style={beerinfo}>ABV: <strong>{this.props.abv}</strong></p>
+                    <a onClick={this.increaseHeartCount}><img src={Heart} alt="heart" style={heartImage} /></a><span>{this.state.heartCount}</span>
+                    <br />
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 Beer.propTypes = {

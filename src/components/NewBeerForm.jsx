@@ -58,9 +58,7 @@ function NewBeerForm(props) {
                         }} />
                     </div>
                     <div className="col">
-                        <input className="form-control" type='text' id='abv' placeholder='ABV' ref={input => {
-                            _abv = input;
-                        }} />
+                        <textarea className="form-control" id='abv' ref={(textarea) => { _abv = textarea; }} />
                     </div>
                 </div>
                 <br />

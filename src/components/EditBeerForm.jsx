@@ -1,4 +1,5 @@
 import React from 'react';
+import BeerList from './BeerList';
 import PropTypes from "prop-types";
 
 const editBeer = {
