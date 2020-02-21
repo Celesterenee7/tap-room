@@ -1,8 +1,10 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
-import Header from "./components/Header";
+import Header from './components/Header';
+import BeerList from './components/BeerList';
 import NewBeerForm from './components/NewBeerForm';
+import NewBeerControl from './components/NewBeerControl';
 import EditBeerForm from './components/EditBeerForm';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './components/Error404';
@@ -35,7 +37,8 @@ class App extends React.Component {
       <Header/>
     <Switch>
       <Route className="navStyle" exact path='/' component={Home} />
-      <Route path='/newbeerform' component={NewBeerForm} />
+      <Route exact path="/beers" render={() => (<BeerList beerList={this.state.masterBeerList} />)}/>
+      <Route path="/newbeer" render={() => (<NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList}/>)}/>
       <Route path='/editbeerform' component={EditBeerForm} />
       <Route component={Error404}/>
     </Switch>
