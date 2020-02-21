@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 
 const addBeer = {
@@ -65,6 +66,8 @@ function NewBeerForm(props) {
                 <br />
                 <button className="buttonStyle" type='submit'>Submit</button>
             </form>
+            <br />
+            <Link to="/">Return Home</Link>
         </div>
     );
 }

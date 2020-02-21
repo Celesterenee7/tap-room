@@ -36,7 +36,7 @@ class App extends React.Component {
       <div className="container">
       <Header/>
     <Switch>
-      
+
     <Route exact path='/' render={()=><BeerList beerList={this.state.masterBeerList} />} />
       <Route path='/newBeer' render={()=><NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList} />} />
       <Route path='/editbeerform' component={EditBeerForm} />
