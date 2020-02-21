@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
-import { v4 } from 'uuid';
 
 const editBeer = {
     paddingTop: "15px",
@@ -15,26 +14,6 @@ const editform = {
 }
 
 function EditBeerForm(props) {
-    let _name = null;
-    let _brand = null;
-    let _price = null;
-    let _abv = null;
-
-    function handleNewBeerFormSubmission(event) {
-        event.preventDefault();
-        props.onNewBeerCreation({
-            name: _name.value,
-            brand: _brand.value,
-            price: _price.value,
-            abv: _abv.value,
-            id: v4(),
-        });
-        _name.value = '';
-        _brand.value = '';
-        _price.value = '';
-        _abv.value = '';
-    }
-
     return (
         <div style={editform}>
             <hr />
@@ -42,27 +21,23 @@ function EditBeerForm(props) {
             <form>
                 <div className="row">
                     <div className="col">
-                        <input className="form-control" type='text' id='name' placeholder='Beer Name' ref={(input) => { _name = input; }} />
+                        <input className="form-control" type='text' id='name' placeholder='Beer Name' />
                     </div>
                     <div className="col">
-                        <input className="form-control" type='text' id='brand' placeholder='Brand' ref={input => {
-                            _brand = input;
-                        }} />
+                        <input className="form-control" type='text' id='brand' placeholder='Brand' />
                     </div>
                 </div>
 
                 <div className="row">
                     <div className="col">
-                        <input className="form-control" type='text' id='price' placeholder='Price' ref={input => {
-                            _price = input;
-                        }} />
+                        <input className="form-control" type='text' id='price' placeholder='Price' />
                     </div>
                     <div className="col">
-                        <textarea className="form-control" id='abv' placeholder='ABV' ref={(textarea) => { _abv = textarea; }} />
+                        <input className="form-control" type='text' id='abv' placeholder='ABV' />
                     </div>
                 </div>
                 <br />
-                <button className="buttonStyle" type='submit'>Update</button>
+                <button className="buttonStyle" type='submit'>Submit</button>
             </form>
             <br />
             <Link to="/">Return Home</Link>

@@ -43,6 +43,7 @@ class Beer extends React.Component {
     render() {
         return (
             <div>
+                <hr />
                 <div className="row">
                     <div className="col-md-6" style={beerGroup}>
                         <p>Name: <em style={beerName}>{this.props.name}</em> </p>
@@ -67,7 +68,8 @@ Beer.propTypes = {
     name: PropTypes.string.isRequired,
     brand: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
-    abv: PropTypes.string.isRequired
+    abv: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired
 };
 
 export default Beer;

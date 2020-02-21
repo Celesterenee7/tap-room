@@ -6,6 +6,7 @@ import NewBeerControl from './components/NewBeerControl';
 import EditBeerForm from './components/EditBeerForm';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './components/Error404';
+import { v4 } from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -14,7 +15,8 @@ const homeBeers = [
       name: "Vicious Mosquito IPA",
       brand: "Sunriver Brewery",
       price: "$6",
-      abv: "7%"
+      abv: "7%",
+      key: v4()
   },
 ];
 
@@ -33,6 +35,19 @@ class App extends React.Component {
    this.setState({masterBeerList: newMasterBeerList});
  }
 
+ handleEditingBeer(name, brand, price, abv, id){
+  let newMasterBeerList = this.state.masterBeerList.slice();
+  newMasterBeerList.forEach(function(b) {
+    if (b.key === id) {
+      b.name = name;
+      b.brand = brand;
+      b.price = price;
+      b.abv = abv;
+    }
+  });
+  this.setState({masterBeerList: newMasterBeerList});
+}
+
   render() {
   return (
     <div>
@@ -44,7 +59,7 @@ class App extends React.Component {
     <Switch>
     <Route exact path='/' render={()=><BeerList beerList={this.state.masterBeerList} />} />
       <Route path='/newBeer' render={()=><NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList} />} />
-      <Route path='/editbeerform' component={EditBeerForm} />
+      <Route path='/editbeerform' render={()=><EditBeerForm onEditBeer={this.handleEditingBeer} />} />
       <Route component={Error404}/>
     </Switch>
         </div>
