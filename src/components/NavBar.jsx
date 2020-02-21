@@ -14,12 +14,13 @@ function NavBar() {
 
     const logo = {
         width: "4%",
-        paddingLeft: "25px"
+        paddingLeft: "10px",
+        paddingBottom: "5px"
     }
 
     const menu = {
         backgroundColor: "#EA9803",
-        height: "80px",
+        height: "90px",
         textAlign: "center",
         paddingTop: '20px',
         wordSpacing: '30px'
@@ -33,19 +34,12 @@ function NavBar() {
 
     }
 
-    const links = {
-        textAlign: "center"
-    }
-
 
     return (
         <div>
             <div style={menu}>
-                <div style={links}>
-                    <Link to="/">Home</Link>  | <Link to="/newbeerform">Add New Beer</Link> | <Link to="/editbeerform">Edit Existing Beer</Link>
-                </div>
-                <a className="menuLine" href="/path" style={navigation} > Beers </a>
-                <a href="#" style={navigation} > Locations</a>
+                <Link to="/" className="menuLine" style={navigation}>Home</Link>
+                <a href="/path" style={navigation} > Beers </a>
                 <img className="beerimage" src={Logo} alt="logo" style={logo} />
                 <a href="#" style={navigation} > About </a>
                 <a href="#" style={navigation} > Contact </a>
