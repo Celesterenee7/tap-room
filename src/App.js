@@ -11,12 +11,20 @@ import Error404 from './components/Error404';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-class App extends React.Component {
+const homeBeers = [
+  {
+      name: "Vicious Mosquito IPA",
+      brand: "Sunriver Brewery",
+      price: "$6",
+      alcoholByVolume: "7%"
+  },
+];
 
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList: []
+      masterBeerList: homeBeers
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
@@ -35,8 +43,8 @@ class App extends React.Component {
       <h1 className="title">Sunriver Brewery</h1>
       <div className="container">
       <Header/>
+      <Home/>
     <Switch>
-
     <Route exact path='/' render={()=><BeerList beerList={this.state.masterBeerList} />} />
       <Route path='/newBeer' render={()=><NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList} />} />
       <Route path='/editbeerform' component={EditBeerForm} />
