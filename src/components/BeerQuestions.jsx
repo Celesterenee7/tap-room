@@ -1,17 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function BeerQuestions(props){
-  return (
-    <div>
-      <p>Are you sure you want to add this beer to the list?</p>
-      <button onClick={props.onTroubleshootingBeer}>Yes</button>
-    </div>
-  );
+const beerQuestion = {
+    fontSize: "25px",
+    textAlign: "center",
+    paddingTop: "40px",
+    paddingBottom: "100px"
+
+}
+
+function BeerQuestions(props) {
+    return (
+        <div>
+            <hr />
+            <div style={beerQuestion}>
+                <p>Are you sure you want to add this beer to the list?</p>
+                <button onClick={props.onTroubleshootingBeer}>Yes</button>
+            </div>
+        </div>
+    );
 }
 
 BeerQuestions.propTypes = {
-  onTroubleshootingBeer: PropTypes.func
+    onTroubleshootingBeer: PropTypes.func
 };
 
 export default BeerQuestions;
