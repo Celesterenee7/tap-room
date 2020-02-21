@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from './images/banner.jpg';
 import Logo from './images/logo.png';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
 
@@ -32,10 +33,17 @@ function NavBar() {
 
     }
 
+    const links = {
+        textAlign: "center"
+    }
+
 
     return (
         <div>
             <div style={menu}>
+                <div style={links}>
+                    <Link to="/">Home</Link>  | <Link to="/newbeerform">Add New Beer</Link> | <Link to="/editbeerform">Edit Existing Beer</Link>
+                </div>
                 <a className="menuLine" href="/path" style={navigation} > Beers </a>
                 <a href="#" style={navigation} > Locations</a>
                 <img className="beerimage" src={Logo} alt="logo" style={logo} />
@@ -43,7 +51,7 @@ function NavBar() {
                 <a href="#" style={navigation} > Contact </a>
             </div>
             <img src={Banner} alt="banner" style={image} />
-        </div>
+        </div >
     );
 }
 export default NavBar;
