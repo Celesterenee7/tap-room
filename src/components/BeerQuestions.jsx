@@ -15,7 +15,7 @@ function BeerQuestions(props) {
             <hr />
             <div style={beerQuestion}>
                 <p>Are you sure you want to add this beer to the list?</p>
-                <button onClick={props.onTroubleshootingBeer}>Yes</button>
+                <button className="buttonStyle" onClick={props.onTroubleshootingBeer}>Yes</button>
             </div>
         </div>
     );

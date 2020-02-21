@@ -38,6 +38,13 @@ h1 {
 
 }
 
+.buttonStyle {
+  padding: 5px 50px 5px 50px;
+  background-color: rgb(234, 152, 3);
+  color: white;
+  border-radius: 5px;
+}
+
 .menuLine {
   position: relative;
   color: white;
