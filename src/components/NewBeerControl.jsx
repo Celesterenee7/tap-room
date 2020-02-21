@@ -7,11 +7,9 @@ class NewBeerControl extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            formVisibleOnPage: false,
+            formVisibleOnPage: true,
         };
-        this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(
-            this
-        );
+        this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
     }
 
     handleTroubleshootingConfirmation() {
@@ -21,21 +19,13 @@ class NewBeerControl extends React.Component {
     render() {
         let currentlyVisibleContent = null;
         if (this.state.formVisibleOnPage) {
-            currentlyVisibleContent = (
-                <NewBeerForm
-                    onNewBeerCreation={this.props.onNewBeerCreation}
-                />
-            );
-        } else {
-            currentlyVisibleContent = (
-                <BeerQuestions
-                    onTroubleshootingConfirmation={
-                        this.handleTroubleshootingConfirmation
-                    }
-                />
-            );
+            currentlyVisibleContent = <NewBeerForm onNewBeerCreation={this.props.onNewBeerCreation} />;
         }
-        return <div>{currentlyVisibleContent}</div>;
+        return (
+            <div>
+                {currentlyVisibleContent}
+            </div>
+        );
     }
 }
 

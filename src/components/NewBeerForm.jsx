@@ -41,9 +41,7 @@ function NewBeerForm(props) {
             <form onSubmit={handleNewBeerFormSubmission}>
                 <div className="row">
                     <div className="col">
-                        <input className="form-control" type='text' id='name' placeholder='Beer Name' ref={input => {
-                            _name = input;
-                        }} />
+                        <input className="form-control" type='text' id='name' placeholder='Beer Name' ref={(input) => { _name = input; }} />
                     </div>
                     <div className="col">
                         <input className="form-control" type='text' id='brand' placeholder='Brand' ref={input => {

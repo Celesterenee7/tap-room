@@ -39,7 +39,7 @@ function NavBar() {
         <div>
             <div style={menu}>
                 <Link to="/" className="menuLine" style={navigation}>Home</Link>
-                <a href="/path" style={navigation} > Beers </a>
+                <a href="/beers" style={navigation} > Beers </a>
                 <img className="beerimage" src={Logo} alt="logo" style={logo} />
                 <a href="#" style={navigation} > About </a>
                 <a href="#" style={navigation} > Contact </a>
