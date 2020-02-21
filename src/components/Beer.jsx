@@ -22,7 +22,7 @@ const beerName = {
 }
 
 const heartImage = {
-    width: "5%",
+    width: "8%",
 }
 
 class Beer extends React.Component {

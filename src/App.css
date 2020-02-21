@@ -1,11 +1,11 @@
-/* @font-face {
-  font-family: 'Norwester';
-  src: local('Norwester'), url('./fonts/norwester.otf') format('truetype');
+@font-face {
+  font-family: 'Brewmasterfont';
+  src: local('Brewmasterfont'), url('./fonts/Brewmasterfont.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Norwester' !important;
-} */
+  font-family: 'Brewmasterfont' !important;
+}
 
 a {
   color: #AD130D;

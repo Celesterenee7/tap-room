@@ -1,9 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar';
-import Home from './components/Home';
 import Header from './components/Header';
 import BeerList from './components/BeerList';
-import NewBeerForm from './components/NewBeerForm';
 import NewBeerControl from './components/NewBeerControl';
 import EditBeerForm from './components/EditBeerForm';
 import { Switch, Route } from 'react-router-dom';
@@ -16,7 +14,7 @@ const homeBeers = [
       name: "Vicious Mosquito IPA",
       brand: "Sunriver Brewery",
       price: "$6",
-      alcoholByVolume: "7%"
+      abv: "7%"
   },
 ];
 
@@ -43,7 +41,6 @@ class App extends React.Component {
       <h1 className="title">Sunriver Brewery</h1>
       <div className="container">
       <Header/>
-      <Home/>
     <Switch>
     <Route exact path='/' render={()=><BeerList beerList={this.state.masterBeerList} />} />
       <Route path='/newBeer' render={()=><NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList} />} />
