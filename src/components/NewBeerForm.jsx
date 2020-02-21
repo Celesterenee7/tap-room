@@ -38,7 +38,7 @@ function NewBeerForm(props) {
         <div style={beerform}>
             <hr />
             <h3 style={addBeer}>Add a new beer below!</h3>
-            <form>
+            <form onSubmit={handleNewBeerFormSubmission}>
                 <div className="row">
                     <div className="col">
                         <input className="form-control" type='text' id='name' placeholder='Beer Name' ref={input => {
@@ -65,7 +65,7 @@ function NewBeerForm(props) {
                     </div>
                 </div>
                 <br />
-                <button type='submit'>Submit</button>
+                <button className="buttonStyle" type='submit'>Submit</button>
             </form>
         </div>
     );

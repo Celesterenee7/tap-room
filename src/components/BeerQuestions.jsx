@@ -6,7 +6,6 @@ const beerQuestion = {
     textAlign: "center",
     paddingTop: "40px",
     paddingBottom: "100px"
-
 }
 
 function BeerQuestions(props) {
