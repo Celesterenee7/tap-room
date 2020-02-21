@@ -22,15 +22,12 @@ The concept for this project is to build a website using React that displays a t
 |Spec|Input|Output|
 |-|-|-|
 
-## Setup/Installation Requirements
-
 ## Support and contact details
 Please contact me directly with any questions or concerns. You can reach me at 541-555-5555
 ## Technologies Used
 _This program utilized:_
 * _REACT_
-* _JAVASCRIPT_
-* _PSQL_
+* _JAVASCRIPT ES6_
 * _CSS_
 * _HTML_
 _and was built in Visiual Studio Code_
