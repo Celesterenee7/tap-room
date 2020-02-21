@@ -1,5 +1,4 @@
 import React from 'react';
-import BeerQuestions from './BeerQuestions';
 import NewBeerForm from './NewBeerForm';
 import PropTypes from "prop-types";
 
