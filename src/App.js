@@ -9,7 +9,23 @@ import Error404 from './components/Error404';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          masterBeerList: [],
+      };
+      this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(
+          this
+      );
+  }
+
+  handleAddingNewBeerToList(newBeer) {
+      this.setState({masterBeerList: [newBeer, ...this.state.masterBeerList],});
+  }
+
+  render() {
+
   return (
     <div>
       <NavBar />
@@ -26,6 +42,7 @@ function App() {
         </div>
     </div>
   );
+ }
 }
 
 export default App;
