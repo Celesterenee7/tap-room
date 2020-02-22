@@ -2,7 +2,7 @@ import React from 'react';
 import EditBeerForm from './EditBeerForm';
 import PropTypes from "prop-types";
 
-class NewBeerControl extends React.Component {
+class EditBeerControl extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +18,7 @@ class NewBeerControl extends React.Component {
     render() {
         let currentlyVisibleContent = null;
         if (this.state.formVisibleOnPage) {
-            currentlyVisibleContent = <EditBeerForm onNewBeerCreation={this.props.onNewBeerCreation} />;
+            currentlyVisibleContent = <EditBeerForm onEditBeerCreation={this.props.onEditBeerCreation} />;
         }
         return (
             <div>
@@ -28,8 +28,8 @@ class NewBeerControl extends React.Component {
     }
 }
 
-NewBeerControl.propTypes = {
-    onNewBeerCreation: PropTypes.func,
+EditBeerControl.propTypes = {
+    onEditBeerCreation: PropTypes.func,
 };
 
-export default NewBeerControl;
+export default EditBeerControl;
