@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import Header from './components/Header';
 import BeerList from './components/BeerList';
 import NewBeerControl from './components/NewBeerControl';
-import EditBeerForm from './components/EditBeerForm';
+import EditBeerControl from './components/EditBeerControl';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './components/Error404';
 import { v4 } from 'uuid';
@@ -59,7 +59,7 @@ class App extends React.Component {
     <Switch>
     <Route exact path='/' render={()=><BeerList beerList={this.state.masterBeerList} />} />
       <Route path='/newBeer' render={()=><NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList} />} />
-      <Route path='/editbeerform' render={()=><EditBeerForm onEditBeer={this.handleEditingBeer} />} />
+      <Route path='/editbeer' render={()=><EditBeerControl onEditBeer={this.handleEditingBeer} />} />
       <Route component={Error404}/>
     </Switch>
         </div>
