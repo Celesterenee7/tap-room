@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Vicious from './images/vicious.png';
-import Heart from './images/heart.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+const beerButton = {
+    padding: '5px 50px 5px 50px',
+    backgroundColor: 'rgb(234, 152, 3)',
+    color: 'white',
+    borderRadius: '5px',
+    marginBottom: '10px'
+}
 
 const beerGroup = {
     paddingLeft: "150px",
@@ -21,24 +28,22 @@ const beerName = {
     fontWeight: "700"
 }
 
-const heartImage = {
-    width: "8%",
-}
 
 class Beer extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            heartCount: 0
+            pintCount: 50
         };
-        this.heartCount = this.heartCount.bind(this);
+        this.pintCount = this.pintCount.bind(this);
     }
 
-    heartCount(event) {
-        let newHeartCount = this.state.heartCount + 1
-        this.setState({ heartCount: newHeartCount });
+    pintCount(event) {
+        let newpintCount = this.state.pintCount - 1
+        this.setState({ pintCount: newpintCount });
     }
+
 
     render() {
         return (
@@ -50,8 +55,10 @@ class Beer extends React.Component {
                         <p>Brand: {this.props.brand}</p>
                         <p>Price: {this.props.price}</p>
                         <p>ABV: <strong>{this.props.abv}</strong></p>
-                        <a onClick={this.heartCount}><img src={Heart} alt="heart" style={heartImage} /></a><span>{this.state.heartCount}</span>
+                        <p>Pints Left:<span>{this.state.pintCount}</span></p>
+                        <button style={beerButton} onClick={this.pintCount}>Buy Pint</button>
                         <br />
+
                     </div>
                     <div className="col-md-6">
                         <div className="beerimage">
