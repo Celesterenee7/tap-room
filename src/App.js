@@ -16,8 +16,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const homeBeers = [{
-  name: "Vicious Mosquito IPA",
-  brand: "Sunriver Brewery",
+  name: "Vicious Meika IPA",
+  brand: "Sun Lover Brewery",
   price: "$6",
   abv: "7",
   key: v4()
@@ -61,7 +61,7 @@ class App extends React.Component {
             <NavBar />
             <br />
             <div className = "container" >
-            <h1 className = "titleLine" > Sunriver Brewery </h1> 
+            <h1 className = "titleLine" > Sun Lover Brewery </h1> 
             <Header />
             <Switch>
               <Route exact path = '/' render = {() => < BeerList beerList = {this.state.masterBeerList}/>}/>
