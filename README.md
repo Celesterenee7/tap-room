@@ -1,11 +1,14 @@
 # Tap Room - Independent Project
-#### React Fundamentals for Epicodus, 2/14/20
+#### React Fundamentals for Epicodus, 2/22/20
 #### By Celeste Renee Morton
 ## Description:
 The concept for this project is to build a website using React that displays a tap room where a bar can track their kegs along with the different types of beer they currently offer.
 
 ## Component Structure:
 ![alt text](https://raw.githubusercontent.com/Celesterenee7/tap-room/master/public/structure.png)
+
+## Website Screenshot:
+![alt text](https://raw.githubusercontent.com/Celesterenee7/tap-room/master/src/components/images/sunlover.png)
 
 ## User Stories:
 * As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
