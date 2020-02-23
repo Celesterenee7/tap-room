@@ -27,7 +27,7 @@ function NewBeerForm(props) {
             brand: _brand.value,
             price: _price.value,
             abv: _abv.value,
-            id: v4(),
+            key: v4(),
         });
         _name.value = '';
         _brand.value = '';

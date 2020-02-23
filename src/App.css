@@ -10,7 +10,7 @@ body {
 
 a {
   color: #AD130D;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none !important;
 }
 
@@ -82,9 +82,32 @@ textarea.form-control {
   padding-top: 50px;
 }
 
-.title {
+.titleLine {
+  position: relative;
   color: rgb(234, 152, 3);
   font-size: 50px;
   text-align: center;
   padding-top: 40px;
+  cursor: pointer;
+}
+
+.titleLine:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.titleLine:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }

@@ -10,6 +10,8 @@ function BeerList(props) {
                     brand={beer.brand}
                     price={beer.price}
                     abv={beer.abv}
+                    pintCount={beer.pintCount}
+                    soldOut={beer.soldOut}
                     key={index}
                     id={beer.key}
                 />
